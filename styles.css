@@ -1,0 +1,64 @@
+.pacman-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.pacman {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50% 50% 0 0;
+  background: #ffe500;
+  overflow: hidden;
+  animation: move-pacman 2s ease-in-out infinite;
+}
+  
+.pacman-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid #ffe500;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #ffe500;
+  border-top-right-radius: 100%;
+}
+  
+.pacman-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 50px solid #ffe500;
+  border-bottom: 50px solid #ffe500;
+  border-left: 50px solid transparent;
+  border-bottom-left-radius: 100%;
+}
+  
+.pacman-eye {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+}
+  
+@keyframes move-pacman {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
